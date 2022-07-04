@@ -1,6 +1,7 @@
 .item {
   display: flex;
   width: 300px;
+  border-radius: 5px;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
   padding: 10px;
@@ -30,6 +31,7 @@
   font-weight: 600;
   font-style: italic;
   list-style: none;
+  color: rgb(154, 147, 213);
 }
 .enabled {
   background-color: green;

@@ -1,0 +1,33 @@
+.transactionHistory {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  border: 2px solid grey;
+  text-align: center;
+  padding: 8px 40px;
+  font-size: 12px;
+}
+
+.transactionHistory > thead tr {
+  background-color: rgb(154, 147, 213);
+  text-transform: uppercase;
+  color: white;
+  padding: 8px 40px;
+}
+.transactionHistory > tbody th {
+  padding: 8px 40px;
+}
+.transactionHistory > tbody td {
+  padding: 8px 40px;
+}
+
+/* .transactionHistory > tbody tr:nth-child(even) {
+  background-color: white;
+}
+
+.transactionHistory > tbody tr:nth-child(odd) {
+  background-color: gray;
+} */
+.transactionHistory > tbody tr:nth-child(2n) {
+  background-color: rgb(222, 220, 238);
+}

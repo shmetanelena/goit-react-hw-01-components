@@ -1,0 +1,20 @@
+.item {
+  width: calc(200px / 3);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.item:not(:last-child) {
+  border-right: 1px solid rgb(116, 113, 146);
+}
+
+.label {
+  text-transform: capitalize;
+  font-size: 12px;
+}
+
+.quantity {
+  font-size: 12px;
+  font-style: italic;
+}

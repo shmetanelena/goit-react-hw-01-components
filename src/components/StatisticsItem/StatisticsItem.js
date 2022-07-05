@@ -1,8 +1,14 @@
 import styles from './StatisticsItem.module.css';
 import PropTypes from 'prop-types';
 
-export const StatisticsItem = ({ label, percentage, color }) => (
-  <li className={styles.item} style={{ backgroundColor: color }}>
+const getRandomHexColor = () => {
+  return `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}`;
+};
+
+export const StatisticsItem = ({ label, percentage }) => (
+  <li className={styles.item} style={{ backgroundColor: getRandomHexColor() }}>
     <span className={styles.label}>{label}</span>
     <span className={styles.percentage}>{percentage}</span>
   </li>
@@ -11,5 +17,4 @@ export const StatisticsItem = ({ label, percentage, color }) => (
 StatisticsItem.propTypes = {
   label: PropTypes.string.isRequired,
   percentage: PropTypes.number.isRequired,
-  color: PropTypes.string.isRequired,
 };

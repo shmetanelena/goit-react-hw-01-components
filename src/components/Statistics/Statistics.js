@@ -2,12 +2,6 @@ import styles from './Statistics.module.css';
 import { StatisticsItem } from 'components/StatisticsItem/StatisticsItem';
 import PropTypes from 'prop-types';
 
-const getRandomHexColor = () => {
-  return `#${Math.floor(Math.random() * 16777215)
-    .toString(16)
-    .padStart(6, 0)}`;
-};
-
 export const Statistics = ({ title, stats }) => (
   <section className={styles.statistics}>
     {title && <h2 className={styles.title}>{title}</h2>}
@@ -17,7 +11,6 @@ export const Statistics = ({ title, stats }) => (
           label={item.label}
           percentage={item.percentage}
           key={item.id}
-          color={getRandomHexColor()}
         />
       ))}
     </ul>
@@ -26,5 +19,11 @@ export const Statistics = ({ title, stats }) => (
 
 Statistics.propTypes = {
   title: PropTypes.string,
-  stats: PropTypes.array.isRequired,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    }).isRequired
+  ),
 };
